@@ -1,0 +1,40 @@
+# write a python prgrm to count no. of char(chr freq) in string.
+s = 'google.com'
+d={}
+for i in s:
+    k = d.keys()
+    if i in d.keys():
+        d[i] +=1
+    else:
+        d[i] = 1
+print(d)
+==================================================================================================
+# Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself
+s = 'baby loves baba'
+print(s[0]+s[1:].replace(s[0],'$'))
+==================================================================================================
+get a str made with 1st 2 and last 2 char from given str, if str len is less than 2 return empty str.
+s = 'w3resoures'
+if len(s)<2:
+    print('   ')
+elif len(s)>=2:
+    print(s[0:2]+s[-2:])
+==================================================================================================
+#Write a Python program to get a single string from two given strings,separated by a space and swap the first two characters of each string
+s1 = 'hi pooja'
+s2 = 'i am praju'
+print(s1[0].replace(s1[0],s2[0]) + s1[1:]+ ' '+ s2[0].replace(s2[0],s1[0] + s2[1:]))
+# or
+s = 'abc', 'xyz'
+p = ' '.join(s)
+print(p[4] + p[1:4] + p[0] + p[5:])
+====================================================================================================
+#Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead.
+# If the string length of the given string is less than 3, leave it unchanged
+str = input('enter the string')
+if len(str) < 3:
+    print(str)
+elif len(str) >= 3:
+    if str[-3:] == 'ing': # str.endswith('ing')
+        print(str + 'ly')
+    else: print(str + 'ing')
